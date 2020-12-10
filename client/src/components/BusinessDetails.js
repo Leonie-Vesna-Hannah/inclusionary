@@ -10,6 +10,13 @@ export default class BusinessDetails extends Component {
     error: null,
     title: "",
     description: "",
+    picture: "",
+    category: [],
+    street: "",
+    houseNumber: null,
+    city: "",
+    zipCode: null,
+    email: "",
   };
 
   getData = () => {

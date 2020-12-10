@@ -32,11 +32,16 @@ router.get("/:id", (req, res, next) => {
 
 // create a business
 router.post("/", (req, res) => {
-  const { title, description } = req.body;
+  const { title, description, street, houseNumber, city, zipCode, email} = req.body;
   const owner = req.user._id;
   Business.create({
     title,
     description,
+    street,
+    houseNumber,
+    city,
+    zipCode,
+    email,
     owner,
   })
     .then((business) => {
