@@ -7,6 +7,8 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
 import { Route, Redirect } from 'react-router-dom';
+import ProjectList from "./components/ProjectList";
+import Businesses from "./components/Businesses"; 
 
 class App extends React.Component {
 
@@ -52,6 +54,8 @@ class App extends React.Component {
           path='/login'
           render={props => <Login setUser={this.setUser} {...props} />}
         />
+
+<Businesses />
       </div>
     );
   }
