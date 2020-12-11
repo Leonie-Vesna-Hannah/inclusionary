@@ -39,6 +39,7 @@ router.post("/", (req, res) => {
     houseNumber,
     city,
     zipCode,
+    country,
     email,
   } = req.body;
   const owner = req.user._id;

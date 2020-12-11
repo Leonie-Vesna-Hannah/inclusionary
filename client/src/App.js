@@ -7,6 +7,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import { Route, Redirect } from "react-router-dom";
+import AllBusinesses from "./components/AllBusinesses";
 
 class App extends React.Component {
   state = {
@@ -23,18 +24,23 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar user={this.state.user} setUser={this.setUser} />
-        <Route
+
+        <AllBusinesses />
+
+        {/* <Route
           exact
           path="/businesses"
-          // component={Businesses}
-          render={(props) => {
-            if (this.state.user) {
-              return <Businesses {...props} />;
-            } else {
-              return <Redirect to="/" />;
-            }
-          }}
-        />
+         component={Businesses}
+         render={(props)
+         // => {
+          //   if (this.state.user) {
+          //     return <Businesses {...props} />;
+          //   } else {
+          //     return <Redirect to="/" />;
+          //   }
+          // }}
+        /> */}
+
         <Route
           exact
           path="/businesses/:id"
