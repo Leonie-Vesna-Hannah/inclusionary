@@ -52,8 +52,17 @@ export default class BusinessDetails extends Component {
   };
 
   componentDidMount = () => {
+
     this.getData();
+    
   };
+
+  // componentDidUpdate = (prevProps, prevState) => {
+  //  if (prevState != this.state)
+  //   {this.getData(); 
+  //   }  
+  // };
+
   deleteBusiness = () => {
     // delete this business from the database
     const id = this.props.match.params.id;
