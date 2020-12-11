@@ -13,9 +13,9 @@ export default class BusinessDetails extends Component {
     picture: "",
     category: [],
     street: "",
-    houseNumber: null,
+    houseNumber: "",
     city: "",
-    zipCode: null,
+    zipCode: "",
     email: "",
   };
 
@@ -30,13 +30,22 @@ export default class BusinessDetails extends Component {
           business: response.data,
           title: response.data.title,
           description: response.data.description,
+          picture: response.data.picture,
+          category: response.data.category,
+          street: response.data.street,
+          houseNumber: response.data.houseNumber,
+          city: response.data.city,
+          zipCode: response.data.zipCode,
+          country: response.data.country,
+          email: response.data.email,
+          // design: response.data.design,
         });
       })
       .catch((err) => {
         console.log(err.response);
         if (err.response.status === 404) {
           this.setState({
-            error: "Sorry - Business Not found 🤷‍♀️ 🤷‍♂️",
+            error: "Sorry - Business Not found",
           });
         }
       });
@@ -74,12 +83,30 @@ export default class BusinessDetails extends Component {
       .put(`/api/businesses/${id}`, {
         title: this.state.title,
         description: this.state.description,
+        picture: this.state.picture,
+        category: this.state.category,
+        street: this.state.street,
+        houseNumber: this.state.houseNumber,
+        city: this.state.city,
+        zipCode: this.state.zipCode,
+        country: this.state.country,
+        email: this.state.email,
+        // design: response.data.design,
       })
       .then((response) => {
         this.setState({
           business: response.data,
           title: response.data.title,
           description: response.data.description,
+          picture: response.data.picture,
+          category: response.data.category,
+          street: response.data.street,
+          houseNumber: response.data.houseNumber,
+          city: response.data.city,
+          zipCode: response.data.zipCode,
+          country: response.data.country,
+          email: response.data.email,
+          // design: response.data.design,
           editForm: false,
         });
       })
@@ -99,6 +126,15 @@ export default class BusinessDetails extends Component {
       <div>
         <h1>{this.state.business.title}</h1>
         <p>{this.state.business.description}</p>
+        <p>{this.state.business.picture}</p>
+        <p>{this.state.business.category}</p>
+        <p>{this.state.business.street}</p>
+        <p>{this.state.business.houseNumber}</p>
+        <p>{this.state.business.city}</p>
+        <p>{this.state.business.zipCode}</p>
+        <p>{this.state.business.country}</p>
+        <p>{this.state.business.email}</p>
+        <p>{this.state.business.design}</p>
 
         {allowedToDelete && (
           <Button variant="danger" onClick={this.deleteBusiness}>

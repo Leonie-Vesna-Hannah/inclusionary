@@ -7,11 +7,12 @@ export default class AddBusiness extends Component {
     title: "",
     description: "",
     picture: "",
-    category: [],
+    // category: [],
     street: "",
     houseNumber: null,
     city: "",
     zipCode: null,
+    country: "",
     email: "",
     // design: [],
   };
@@ -38,6 +39,7 @@ export default class AddBusiness extends Component {
         houseNumber: this.state.houseNumber,
         city: this.state.city,
         zipCode: this.state.zipCode,
+        country: this.state.country,
         email: this.state.email,
         // design: this.state.design,
       })
@@ -49,9 +51,9 @@ export default class AddBusiness extends Component {
           picture: "",
           category: [],
           street: "",
-          houseNumber: 0,
+          houseNumber: null,
           city: "",
-          zipCode: 0,
+          zipCode: null,
           email: "",
           // design: [],
         });
@@ -163,7 +165,7 @@ export default class AddBusiness extends Component {
             onChange={this.handleChange}
           />
         </Form.Group>
-       
+
         <Button type="submit">Add your Business</Button>
       </Form>
     );

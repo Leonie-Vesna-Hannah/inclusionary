@@ -32,8 +32,17 @@ router.get("/:id", (req, res, next) => {
 
 // create a business
 router.post("/", (req, res) => {
-  const { title, description, street, houseNumber, city, zipCode, email} = req.body;
+  const {
+    title,
+    description,
+    street,
+    houseNumber,
+    city,
+    zipCode,
+    email,
+  } = req.body;
   const owner = req.user._id;
+
   Business.create({
     title,
     description,
@@ -41,6 +50,7 @@ router.post("/", (req, res) => {
     houseNumber,
     city,
     zipCode,
+    country,
     email,
     owner,
   })
@@ -54,10 +64,19 @@ router.post("/", (req, res) => {
 
 // update a business
 router.put("/:id", (req, res, next) => {
-  const { title, description } = req.body;
+  const {
+    title,
+    description,
+    street,
+    houseNumber,
+    city,
+    zipCode,
+    country,
+    email,
+  } = req.body;
   Business.findByIdAndUpdate(
     req.params.id,
-    { title, description },
+    { title, description, street, houseNumber, city, zipCode, country, email },
     // this ensures that we are getting the updated document as a return
     { new: true }
   )
@@ -65,7 +84,9 @@ router.put("/:id", (req, res, next) => {
       console.log(business);
       res.status(200).json(business);
     })
-    .catch((err) => {});
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 router.delete("/:id", (req, res, next) => {
