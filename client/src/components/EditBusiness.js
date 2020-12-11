@@ -34,7 +34,7 @@ export default class EditBusiness extends Component {
               id="picture"
               name="picture"
               value={this.props.picture}
-              onChange={this.handleChange}
+              onChange={this.props.handleChange}
             />
           </Form.Group>
           <Form.Group>
@@ -44,7 +44,7 @@ export default class EditBusiness extends Component {
               id="category"
               name="category"
               value={this.props.category}
-              onChange={this.handleChange}
+              onChange={this.props.handleChange}
             />
           </Form.Group>
           <Form.Group>
@@ -54,7 +54,7 @@ export default class EditBusiness extends Component {
               id="street"
               name="street"
               value={this.props.street}
-              onChange={this.handleChange}
+              onChange={this.props.handleChange}
             />
           </Form.Group>
           <Form.Group>
@@ -64,7 +64,7 @@ export default class EditBusiness extends Component {
               id="houseNumber"
               name="houseNumber"
               value={this.props.houseNumber}
-              onChange={this.handleChange}
+              onChange={this.props.handleChange}
             />
           </Form.Group>
           <Form.Group>
@@ -74,7 +74,7 @@ export default class EditBusiness extends Component {
               id="city"
               name="city"
               value={this.props.city}
-              onChange={this.handleChange}
+              onChange={this.props.handleChange}
             />
           </Form.Group>
           <Form.Group>
@@ -84,7 +84,7 @@ export default class EditBusiness extends Component {
               id="zipCode"
               name="zipCode"
               value={this.props.zipCode}
-              onChange={this.handleChange}
+              onChange={this.props.handleChange}
             />
           </Form.Group>
           <Form.Group>
@@ -94,7 +94,7 @@ export default class EditBusiness extends Component {
               id="country"
               name="country"
               value={this.props.country}
-              onChange={this.handleChange}
+              onChange={this.props.handleChange}
             />
           </Form.Group>
           <Form.Group>
@@ -104,7 +104,7 @@ export default class EditBusiness extends Component {
               id="email"
               name="email"
               value={this.props.email}
-              onChange={this.handleChange}
+              onChange={this.props.handleChange}
             />
           </Form.Group>
 
