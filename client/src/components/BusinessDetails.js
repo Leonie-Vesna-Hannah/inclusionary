@@ -13,9 +13,9 @@ export default class BusinessDetails extends Component {
     picture: "",
     category: [],
     street: "",
-    houseNumber: null,
+    houseNumber: "",
     city: "",
-    zipCode: null,
+    zipCode: "",
     email: "",
   };
 
@@ -45,7 +45,7 @@ export default class BusinessDetails extends Component {
         console.log(err.response);
         if (err.response.status === 404) {
           this.setState({
-            error: "Sorry - Business Not found 🤷‍♀️ 🤷‍♂️",
+            error: "Sorry - Business Not found",
           });
         }
       });

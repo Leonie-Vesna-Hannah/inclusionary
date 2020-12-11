@@ -27,6 +27,87 @@ export default class EditBusiness extends Component {
               onChange={this.props.handleChange}
             />
           </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="picture">Picture: </Form.Label>
+            <Form.Control
+              type="text"
+              id="picture"
+              name="picture"
+              value={this.props.picture}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="category">Category: </Form.Label>
+            <Form.Control
+              type="text"
+              id="category"
+              name="category"
+              value={this.props.category}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="street">Street: </Form.Label>
+            <Form.Control
+              type="text"
+              id="street"
+              name="street"
+              value={this.props.street}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="houseNumber">House number: </Form.Label>
+            <Form.Control
+              type="number"
+              id="houseNumber"
+              name="houseNumber"
+              value={this.props.houseNumber}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="city">City: </Form.Label>
+            <Form.Control
+              type="text"
+              id="city"
+              name="city"
+              value={this.props.city}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="zipCode">ZIP Code: </Form.Label>
+            <Form.Control
+              type="number"
+              id="zipCode"
+              name="zipCode"
+              value={this.props.zipCode}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="country">Country: </Form.Label>
+            <Form.Control
+              type="text"
+              id="country"
+              name="country"
+              value={this.props.country}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="email">E-mail: </Form.Label>
+            <Form.Control
+              type="text"
+              id="email"
+              name="email"
+              value={this.props.email}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+
           <Button type="submit">Update Business</Button>
         </Form>
       </div>
